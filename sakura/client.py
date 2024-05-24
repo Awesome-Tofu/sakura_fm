@@ -2,10 +2,10 @@ from .db import insertChat, getChatId, delete_sakura_database
 from .sakura import Sakura
 
 class Client:
-    def __init__(self, login):
-        self.sakura_username = login["username"]
-        self.sakura_password = login["password"]
-        self.mongoURI = login["mongo"]
+    def __init__(self, username: str, password: str, mongo: str):
+        self.sakura_username = username
+        self.sakura_password = password
+        self.mongoURI = mongo
         self.sakura = Sakura(self.sakura_username, self.sakura_password, self.mongoURI)
         
     # SEND MESSAGE

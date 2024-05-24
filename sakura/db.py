@@ -22,10 +22,8 @@ def getChatId(user_id, mongoURI):
     # Find the chat data by user id
     chat = chat_collection.find_one({'user_id': user_id})
     if chat:
-        print(chat['chat_id'])
         return chat['chat_id']
     else:
-        print("NOT Found")
         return None
 
 def delete_sakura_database(mongoURI):

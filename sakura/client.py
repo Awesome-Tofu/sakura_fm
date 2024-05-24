@@ -1,5 +1,5 @@
-from db import insertChat, getChatId, delete_sakura_database
-from sakura import Sakura
+from .db import insertChat, getChatId, delete_sakura_database
+from .sakura import Sakura
 
 class Client:
     def __init__(self, login):
@@ -17,10 +17,12 @@ class Client:
             if chat_id:
                 # If a chat exists, continue the chat
                 chat_data = self.sakura.continue_chat(chat_id, prompt)
+                return chat_data
             else:
                 # If no chat exists, create a new chat and store it in the database
                 chat_data = self.sakura.create_chat(char_id, prompt)
                 insertChat(chat_data['chat_id'], uid, char_id, self.mongoURI)
+                return chat_data
 
         except Exception as e:
             raise RuntimeError("An error occurred while sending the message: {}".format(str(e)))
@@ -40,7 +42,7 @@ class Client:
     # DELETE DATABASE
     def delete_db(self):
         try:
-            delete_sakura_database(self.mongoURI)
+            return delete_sakura_database(self.mongoURI)
         except Exception as e:
             raise RuntimeError("An error occurred while deleting the database: {}".format(str(e)))
         

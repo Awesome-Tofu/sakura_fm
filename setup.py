@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = "0.0.5"
+VERSION = "0.0.6"
 
 def get_long_description():
     with open("README.md", encoding="UTF-8") as f:
@@ -15,6 +15,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Aditya',
     author_email='adityaraj6311@gmail.com',
+    url="https://github.com/awesome-Tofu/sakura_fm",
     description='A simple scraper package for chatting with bots from sakura.fm',
     long_description=get_long_description(),
     install_requires=[

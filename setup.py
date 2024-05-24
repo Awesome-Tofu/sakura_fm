@@ -1,6 +1,11 @@
 from setuptools import setup, find_packages
 
-VERSION = "0.0.4"
+VERSION = "0.0.5"
+
+def get_long_description():
+    with open("README.md", encoding="UTF-8") as f:
+        long_description = f.read()
+        return long_description
 
 setup(
     name='sakura_fm',
@@ -11,6 +16,7 @@ setup(
     author='Aditya',
     author_email='adityaraj6311@gmail.com',
     description='A simple scraper package for chatting with bots from sakura.fm',
+    long_description=get_long_description(),
     install_requires=[
         'requests',
         'beautifulsoup4',

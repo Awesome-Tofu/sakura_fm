@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = "0.0.7"
+VERSION = "0.0.8"
 
 def get_long_description():
     with open("README.md", encoding="UTF-8") as f:
@@ -8,7 +8,7 @@ def get_long_description():
         return long_description
 
 setup(
-    name='sakura-fm',
+    name='sakurafm',
     version=VERSION,
     packages=find_packages(),
     include_package_data=True,

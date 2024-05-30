@@ -3,7 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-# AUTHENTICATE
 class Sakura:
     def __init__(self, sakura_username, sakura_password, mongoURI):
         self.sakura_username = sakura_username
@@ -11,6 +10,7 @@ class Sakura:
         self.mongoURI = mongoURI
         self.baseUrl = "sakura.fm"
         
+    # AUTHENTICATE
     def authenticate(self, jwt):
         headers = {
             'Content-Type': 'application/json',

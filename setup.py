@@ -8,7 +8,7 @@ def get_long_description():
         return long_description
 
 setup(
-    name='sakurafm',
+    name='sakura-fm',
     version=VERSION,
     packages=find_packages(),
     include_package_data=True,

@@ -7,7 +7,7 @@ This is a Python client for the Sakura API. It provides methods to authenticate,
 You can install the Sakura Python Client using pip:
 
 ```bash
-pip install sakura_fm
+pip install sakura-fm
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ pip install sakura_fm
 First, import the `Client` class from the `sakura` package:
 
 ```python
-from sakura_fm import Client
+from sakura import Client
 ```
 
 Next, create an instance of the `Client` class, passing your Sakura username, password and mongo uri to the constructor:

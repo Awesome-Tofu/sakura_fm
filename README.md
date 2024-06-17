@@ -1,6 +1,6 @@
 # Sakura Python Client
 
-This is a Python client for the Sakura API. It provides methods to authenticate, send messages, get selfies, and more.
+This is a Python client for the [Sakura API](https://www.sakura.fm/). It provides methods to authenticate, send messages, get selfies, and more.
 
 ## Installation
 
